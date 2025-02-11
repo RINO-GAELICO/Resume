@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Button } from "react-bootstrap";
-
-// Replace PDF rendering with image rendering
 import resumeImage from './resume.png';  // Import the image directly if it's in the `src` folder
+import resumePdf from './resume.pdf';  // Import the PDF file directly
 
 function Resume() {
   const [width, setWidth] = useState(1200);
@@ -13,9 +12,10 @@ function Resume() {
 
   return (
     <Container fluid className="resume-section">
+      {/* Download Button still links to the PDF */}
       <Button
         variant="primary"
-        href={resumeImage}  // Update the link to the image
+        href={resumePdf}  // Linking to the PDF file for download
         target="_blank"
         style={{ maxWidth: "250px" }}
       >
